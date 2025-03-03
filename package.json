@@ -24,5 +24,20 @@
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.12.0",
     "vite": "^6.0.1"
-  }
+  },
+  "description": "A Professional Portfolio to show off my Software Development Skills",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiecaelwaerts/prof_portfolio.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Tyler Caelwaerts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiecaelwaerts/prof_portfolio/issues"
+  },
+  "homepage": "https://github.com/tiecaelwaerts/prof_portfolio#readme"
 }
