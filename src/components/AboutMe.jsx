@@ -1,10 +1,11 @@
 import React from 'react';
+import profilePic from '../images/profilePic.jpg';
 
 const AboutMe = () => {
   return (
     <main className="text-center">
       <img 
-        src="/images/profilePic.jpg" 
+        src={profilePic} 
         alt="Tyler Caelwaerts" 
         className="w-32 h-32 rounded-full mx-auto"
       />

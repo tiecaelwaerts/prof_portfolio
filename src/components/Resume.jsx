@@ -1,4 +1,5 @@
 import React from 'react';
+import resumePDF from '../assets/resume.pdf'; // Ensure the path to the resume PDF is correct
 
 const Resume = () => {
   return (
@@ -6,7 +7,7 @@ const Resume = () => {
       {/* Resume Download */}
       <div className="text-center">
         <a 
-          href="/assets/resume.pdf" 
+          href={resumePDF} 
           download 
           className="inline-block px-6 py-3 bg-blue-600 text-white font-bold text-lg rounded-lg hover:bg-blue-700 transition duration-300"
         >

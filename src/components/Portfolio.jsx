@@ -1,12 +1,16 @@
 import React from 'react';
 import Project from './Project.jsx';
+import adventurersBoard from '../images/adventurersBoard.png';
+import projectTwo from '../images/projectTwo.png';
+import weatherDashboard from '../images/weatherDashboard.png';
+import treasureBarBrawl from '../images/treasureBarBrawl.png';
 
 const Portfolio = () => {
   const projects = [
-    { title: 'Adventurers Board', image: '/images/adventurersBoard.png', link: 'https://adventurers-board.onrender.com/', repo: 'https://github.com/tiecaelwaerts/adventurers-board' },
-    { title: 'SpellCaster', image: '/images/projectTwo.png', link: 'https://tiecaelwaerts.github.io/caster-leveling-sheet/', repo: 'https://github.com/tiecaelwaerts/caster-leveling-sheet' },
-    { title: 'Weather Dashboard', image: '/images/weatherDashboard.png', link: 'https://weather-dashboard-kvm7.onrender.com', repo: 'https://github.com/tiecaelwaerts/weather-dashboard' },
-    { title: 'Treasure Bar Brawl', image: '/images/treasureBarBrawl.png', link: 'https://project-four.com', repo: 'https://github.com/tiecaelwaerts/Treasure-Bar-Brawl' }
+    { title: 'Adventurers Board', image: adventurersBoard, link: 'https://adventurers-board.onrender.com/', repo: 'https://github.com/tiecaelwaerts/adventurers-board' },
+    { title: 'SpellCaster', image: projectTwo, link: 'https://tiecaelwaerts.github.io/caster-leveling-sheet/', repo: 'https://github.com/tiecaelwaerts/caster-leveling-sheet' },
+    { title: 'Weather Dashboard', image: weatherDashboard, link: 'https://weather-dashboard-kvm7.onrender.com', repo: 'https://github.com/tiecaelwaerts/weather-dashboard' },
+    { title: 'Treasure Bar Brawl', image: treasureBarBrawl, link: 'https://project-four.com', repo: 'https://github.com/tiecaelwaerts/Treasure-Bar-Brawl' }
   ];
 
   return (
