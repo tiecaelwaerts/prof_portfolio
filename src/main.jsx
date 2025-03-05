@@ -6,8 +6,6 @@ import AboutMe from './components/AboutMe.jsx';
 import Portfolio from './components/Portfolio.jsx';
 import Contact from './components/Contact.jsx';
 import Resume from './components/Resume.jsx';
-import Header from 'src/components/header.jsx';
-import Footer from 'src/components/footer.jsx';
 
 const router = createBrowserRouter([
   { path: '/', element: <App />, children: [
@@ -19,9 +17,5 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Header />
-    <RouterProvider router={router} />
-    <Footer />
-  </React.StrictMode>
+    <RouterProvider router={router} />   
 );
