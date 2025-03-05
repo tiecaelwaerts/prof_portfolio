@@ -6,8 +6,8 @@ import AboutMe from './components/AboutMe.jsx';
 import Portfolio from './components/Portfolio.jsx';
 import Contact from './components/Contact.jsx';
 import Resume from './components/Resume.jsx';
-import Header from './components/Header.jsx';
-import Footer from './components/Footer.jsx';
+import Header from 'src/components/header.jsx';
+import Footer from 'src/components/footer.jsx';
 
 const router = createBrowserRouter([
   { path: '/', element: <App />, children: [
