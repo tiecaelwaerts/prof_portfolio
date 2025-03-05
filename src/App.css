@@ -1,3 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+header, footer {
+  background-color: #002868; /* Navy Blue */
+  color: white;
+  padding: 1rem;
+}
+
+header h1, footer p {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a.active {
+  color: #bf0a30; /* Red */
+}
+
+main {
+  padding: 2rem;
+}
+
+button {
+  background-color: #bf0a30; /* Red */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a00a25; /* Darker Red */
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-900 text-white p-4">
+    <footer>
       <p>Connect with me:</p>
       <ul className="flex space-x-4">
         <li><a href="https://github.com/tiecaelwaerts" target="_blank" rel="noopener noreferrer">GitHub</a></li>
