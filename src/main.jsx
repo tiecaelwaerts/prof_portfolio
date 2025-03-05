@@ -1,10 +1,10 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
-import AboutMe from 'src/components/aboutMe.jsx';
-import Portfolio from 'src/components/portfolio.jsx';
-import Contact from 'src/components/contact.jsx';
-import Resume from 'src/components/resume.jsx';
+import AboutMe from './components/AboutMe.jsx';
+import Portfolio from './components/Portfolio.jsx';
+import Contact from './components/Contact.jsx';
+import Resume from './components/Resume.jsx';
 
 const router = createBrowserRouter([
   { path: '/', element: <App />, children: [
