@@ -1,5 +1,5 @@
 import React from 'react';
-import Project from './Project.jsx';
+import Project from './project.jsx';
 import adventurersBoard from '../images/adventurersBoard.png';
 import SpellCaster from '../images/spellCaster.png';
 import weatherDashboard from '../images/weatherDashboard.png';
