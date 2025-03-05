@@ -6,13 +6,5 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    rollupOptions: {
-      external: [
-        './components/AboutMe.jsx',
-        './components/Portfolio.jsx',
-        './components/Contact.jsx',
-        './components/Resume.jsx'
-      ]
-    }
   }
 })
