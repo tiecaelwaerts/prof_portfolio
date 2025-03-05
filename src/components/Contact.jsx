@@ -9,88 +9,91 @@ function Form() {
     const handleChange = (e) => {
         const { name, value } = e.target;
 
-        if (name === 'name') {
-            setName(value);
-        } else if (name === 'email') {
-            setEmail(value);
-        } else {
-            setMessage(value);
-        }
-    }
+        if (name === 'name') setName(value);
+        else if (name === 'email') setEmail(value);
+        else setMessage(value);
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        setName('');
-        setEmail('');
-        setMessage('');
-    }
+        if (handleEmptyFields()) {
+            setName('');
+            setEmail('');
+            setMessage('');
+        }
+    };
 
     const handleEmptyFields = () => {
-        const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
         
-        if (name === '') {
+        if (!name.trim()) {
             setError('Name is required');
             return false;
-        } else if (email === '') {
+        }
+        if (!email.trim()) {
             setError('Email is required');
             return false;
-        } else if (!pattern.test(email)) {
+        }
+        if (!emailPattern.test(email)) {
             setError('Your email is invalid');
             return false;
-        } else if (message === '') {
+        }
+        if (!message.trim()) {
             setError('Message is required');
             return false;
-        } else {
-            setError('');
         }
-
+        
+        setError('');
         return true;
-    }
+    };
 
     return (
-        <div>
-            <form className onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="name" className>Name:</label>
+        <div className="max-w-lg mx-auto p-6 bg-white border-4 border-blue-500 shadow-lg rounded-lg">
+            <h2 className="text-center text-2xl font-bold text-red-600">Contact Me</h2>
+            <form onSubmit={handleSubmit} className="mt-4">
+                <div className="mb-4">
+                    <label htmlFor="name" className="block font-semibold text-blue-700">Name:</label>
                     <input 
                         value={name}
                         name="name"
                         onChange={handleChange}
                         onBlur={handleEmptyFields}
                         type="text"
-                        className="form-control"
+                        className="w-full p-2 border rounded-lg"
                     />
                 </div>
-                <div>
-                    <label htmlFor="email" className>Email:</label>
+                <div className="mb-4">
+                    <label htmlFor="email" className="block font-semibold text-blue-700">Email:</label>
                     <input 
                         value={email}
                         name="email"
                         onChange={handleChange}
                         onBlur={handleEmptyFields}
                         type="email"
-                        className="form-control"
+                        className="w-full p-2 border rounded-lg"
                     />
                 </div>
-                <div className>
-                    <label htmlFor="message" className>Message:</label>
+                <div className="mb-4">
+                    <label htmlFor="message" className="block font-semibold text-blue-700">Message:</label>
                     <textarea 
                         value={message}
                         name="message"
                         onChange={handleChange}
                         onBlur={handleEmptyFields}
-                        className="form-control"
-                        rows={10}
+                        className="w-full p-2 border rounded-lg"
+                        rows={5}
                     />
                 </div>
-                <p className>{error}</p>
-                <button type="submit" className>
+                {error && <p className="text-red-500 font-semibold">{error}</p>}
+                <button 
+                    type="submit" 
+                    className="w-full py-2 px-4 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition duration-300"
+                >
                     Submit
                 </button>
             </form>
         </div>
-    )
+    );
 }
 
 export default Form;

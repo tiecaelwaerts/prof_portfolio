@@ -8,6 +8,7 @@ import Resume from './components/Resume.jsx';
 
 const router = createBrowserRouter([
   { path: '/', element: <App />, children: [
+    { path: '/', element: <AboutMe /> }, // Default route
     { path: '/aboutme', element: <AboutMe /> },
     { path: '/portfolio', element: <Portfolio /> },
     { path: '/contact', element: <Contact /> },
