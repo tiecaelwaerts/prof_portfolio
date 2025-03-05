@@ -47,56 +47,56 @@ function Form() {
     };
 
     return (
-        <div className="max-w-lg mx-auto p-8 bg-white border-4 border-blue-500 shadow-xl rounded-lg">
-            <h2 className="text-center text-3xl font-bold text-red-600">Contact Me</h2>
+        <div className="contact-form-container">
+            <h2 className="contact-form-title">Contact Me</h2>
 
             {/* Contact Info Section */}
-            <div className="mt-6 mb-8 grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
-                <div className="p-4 bg-gray-100 rounded-lg">
-                    <p className="font-semibold text-blue-700">Email</p>
-                    <p className="text-gray-700">tiecaelwaerts@gmail.com</p>
+            <div className="contact-info">
+                <div className="contact-info-item">
+                    <p className="contact-info-label">Email</p>
+                    <p className="contact-info-value">tiecaelwaerts@gmail.com</p>
                 </div>
             </div>
 
             {/* Contact Form */}
-            <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                    <label htmlFor="name" className="block font-semibold text-blue-700 mb-1">Name:</label>
+            <form onSubmit={handleSubmit} className="contact-form">
+                <div className="form-group">
+                    <label htmlFor="name" className="form-label">Name:</label>
                     <input 
                         value={name}
                         name="name"
                         onChange={handleChange}
                         onBlur={handleEmptyFields}
                         type="text"
-                        className="w-full p-3 border border-gray-300 rounded-lg"
+                        className="form-input"
                     />
                 </div>
-                <div>
-                    <label htmlFor="email" className="block font-semibold text-blue-700 mb-1">Email:</label>
+                <div className="form-group">
+                    <label htmlFor="email" className="form-label">Email:</label>
                     <input 
                         value={email}
                         name="email"
                         onChange={handleChange}
                         onBlur={handleEmptyFields}
                         type="email"
-                        className="w-full p-3 border border-gray-300 rounded-lg"
+                        className="form-input"
                     />
                 </div>
-                <div>
-                    <label htmlFor="message" className="block font-semibold text-blue-700 mb-1">Message:</label>
+                <div className="form-group">
+                    <label htmlFor="message" className="form-label">Message:</label>
                     <textarea 
                         value={message}
                         name="message"
                         onChange={handleChange}
                         onBlur={handleEmptyFields}
-                        className="w-full p-3 border border-gray-300 rounded-lg"
+                        className="form-textarea"
                         rows={5}
                     />
                 </div>
-                {error && <p className="text-red-500 font-semibold text-center">{error}</p>}
+                {error && <p className="form-error">{error}</p>}
                 <button 
                     type="submit" 
-                    className="w-full py-3 px-4 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition duration-300"
+                    className="form-submit-button"
                 >
                     Submit
                 </button>

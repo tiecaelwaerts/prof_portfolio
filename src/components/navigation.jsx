@@ -3,12 +3,12 @@ import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
   return (
-    <nav className="w-full">
-      <ul className="flex justify-end space-x-6 pr-8 text-white text-lg font-semibold">
+    <nav className="navigation">
+      <ul className="navigation-list">
         <li>
           <NavLink 
             to="/" 
-            className={({ isActive }) => isActive ? "text-yellow-500 border-b-2 border-yellow-500 pb-1" : "hover:text-yellow-300 transition duration-300"}
+            className={({ isActive }) => isActive ? "active-link" : "inactive-link"}
           >
             About Me
           </NavLink>
@@ -16,7 +16,7 @@ const Navigation = () => {
         <li>
           <NavLink 
             to="/portfolio" 
-            className={({ isActive }) => isActive ? "text-yellow-500 border-b-2 border-yellow-500 pb-1" : "hover:text-yellow-300 transition duration-300"}
+            className={({ isActive }) => isActive ? "active-link" : "inactive-link"}
           >
             Portfolio
           </NavLink>
@@ -24,7 +24,7 @@ const Navigation = () => {
         <li>
           <NavLink 
             to="/contact" 
-            className={({ isActive }) => isActive ? "text-yellow-500 border-b-2 border-yellow-500 pb-1" : "hover:text-yellow-300 transition duration-300"}
+            className={({ isActive }) => isActive ? "active-link" : "inactive-link"}
           >
             Contact
           </NavLink>
@@ -32,7 +32,7 @@ const Navigation = () => {
         <li>
           <NavLink 
             to="/resume" 
-            className={({ isActive }) => isActive ? "text-yellow-500 border-b-2 border-yellow-500 pb-1" : "hover:text-yellow-300 transition duration-300"}
+            className={({ isActive }) => isActive ? "active-link" : "inactive-link"}
           >
             Resume
           </NavLink>

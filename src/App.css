@@ -151,3 +151,263 @@ button:hover {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* Custom styles for Resume component */
+.resume-section {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.resume-download {
+  text-align: center;
+}
+
+.resume-download-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  font-size: 1.125rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.resume-download-link:hover {
+  background-color: #0056b3;
+}
+
+.resume-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: center;
+  color: #0056b3;
+  margin-top: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.skill-item {
+  padding: 0.5rem;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+/* Custom styles for Footer component */
+.footer {
+  background-color: #002868;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #bf0a30;
+}
+
+.footer-text {
+  font-size: 0.875rem;
+  color: #ccc;
+}
+
+/* Custom styles for Contact component */
+.contact-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border: 4px solid #0056b3;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.contact-form-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #bf0a30;
+}
+
+.contact-info {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.contact-info-item {
+  padding: 1rem;
+  background-color: #f0f0f0;
+  border-radius: 0.5rem;
+}
+
+.contact-info-label {
+  font-weight: bold;
+  color: #0056b3;
+}
+
+.contact-info-value {
+  color: #333;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #0056b3;
+  margin-bottom: 0.5rem;
+}
+
+.form-input, .form-textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.form-error {
+  color: #bf0a30;
+  font-weight: bold;
+  text-align: center;
+}
+
+.form-submit-button {
+  padding: 0.75rem;
+  background-color: #bf0a30;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-submit-button:hover {
+  background-color: #a00a25;
+}
+
+/* Custom styles for AboutMe component */
+.about-me-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.profile-pic {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.about-me-text {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Custom styles for Header component */
+.header {
+  background-color: #002868; /* Navy Blue */
+  color: white;
+  padding: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #bf0a30; /* Red */
+  margin-bottom: 1rem;
+}
+
+/* Custom styles for Navigation component */
+.navigation {
+  width: 100%;
+}
+
+.navigation-list {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2rem;
+  list-style: none;
+  margin: 0;
+}
+
+.navigation-list li {
+  margin-left: 1.5rem;
+}
+
+.navigation-list a {
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navigation-list a:hover {
+  color: #ffcc00; /* Yellow */
+}
+
+.active-link {
+  color: #ffcc00; /* Yellow */
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 0.25rem;
+}
+
+.inactive-link {
+  color: white;
+}
