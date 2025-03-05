@@ -14,9 +14,9 @@ const Portfolio = () => {
   ];
 
   return (
-    <section className="p-8">
-      <h1 className="text-3xl font-bold mb-8 text-center">My Projects</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section className="portfolio-section">
+      <h1 className="portfolio-title">My Projects</h1>
+      <div className="portfolio-grid">
         {projects.map((project, index) => (
           <Project key={index} title={project.title} image={project.image} link={project.link} repo={project.repo} />
         ))}

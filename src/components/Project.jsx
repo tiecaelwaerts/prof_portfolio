@@ -2,12 +2,12 @@ import React from 'react';
 
 const Project = ({ title, image, link, repo }) => {
   return (
-    <div className="mb-8 p-4 border rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold mb-2">{title}</h2>
-      <img src={image} alt={title} className="w-full h-48 object-cover rounded-lg mb-4" />
-      <p className="text-lg">
-        <a href={link} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Deployed Application</a> | 
-        <a href={repo} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline ml-2">GitHub Repository</a>
+    <div className="project-card">
+      <h2 className="project-title">{title}</h2>
+      <img src={image} alt={title} className="project-image" />
+      <p className="project-links">
+        <a href={link} target="_blank" rel="noopener noreferrer" className="project-link">Deployed Application</a> | 
+        <a href={repo} target="_blank" rel="noopener noreferrer" className="project-link">GitHub Repository</a>
       </p>
     </div>
   );
