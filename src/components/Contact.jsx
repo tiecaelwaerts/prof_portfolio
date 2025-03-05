@@ -54,11 +54,7 @@ function Form() {
             <div className="mt-6 mb-8 grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
                 <div className="p-4 bg-gray-100 rounded-lg">
                     <p className="font-semibold text-blue-700">Email</p>
-                    <p className="text-gray-700">your.email@example.com</p>
-                </div>
-                <div className="p-4 bg-gray-100 rounded-lg">
-                    <p className="font-semibold text-blue-700">Phone</p>
-                    <p className="text-gray-700">(123) 456-7890</p>
+                    <p className="text-gray-700">tiecaelwaerts@gmail.com</p>
                 </div>
             </div>
 
