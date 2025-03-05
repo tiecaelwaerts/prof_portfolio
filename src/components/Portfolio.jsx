@@ -1,5 +1,5 @@
 import React from 'react';
-import Project from './project.jsx';
+import Project from './Project.jsx';
 
 const Portfolio = () => {
   const projects = [
