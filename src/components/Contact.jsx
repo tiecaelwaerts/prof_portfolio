@@ -1,10 +1,12 @@
 import { useState } from "react";
+import emailjs from 'emailjs-com';
 
 function Form() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -16,9 +18,7 @@ function Form() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (handleEmptyFields()) {
-            setName('');
-            setEmail('');
-            setMessage('');
+            sendEmail();
         }
     };
 
@@ -44,6 +44,26 @@ function Form() {
         
         setError('');
         return true;
+    };
+
+    const sendEmail = () => {
+        const templateParams = {
+            from_name: name,
+            from_email: email,
+            message: message,
+        };
+
+        emailjs.send('service_99wga6h', 'template_4bpbtvo', templateParams, 'Oi6-0ZpthgcZC6xJU')
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                setSuccess('Your message has been sent successfully!');
+                setName('');
+                setEmail('');
+                setMessage('');
+            }, (err) => {
+                console.error('FAILED...', err);
+                setError('Failed to send your message. Please try again later.');
+            });
     };
 
     return (
@@ -94,6 +114,7 @@ function Form() {
                     />
                 </div>
                 {error && <p className="form-error">{error}</p>}
+                {success && <p className="form-success">{success}</p>}
                 <button 
                     type="submit" 
                     className="form-submit-button"
